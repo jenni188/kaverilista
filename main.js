@@ -58,9 +58,19 @@ function filterItems(e){
 let kaverit = [];
 
 function lisaaKaverit(){
-    for (let i=0; i<10; i++)
-    kaverit.push(prompt ("anna kaverin nimi"))
+    for (let i=0; i<10; i++) {
+        kaverit.push(prompt ("anna kaverin nimi"))
+    }
+    printtaaKaverit()
 }
 
 
+function printtaaKaverit(){
 
+    let kaveriOl = document.getElementById('kaverit');
+
+    for (let i=0; i<kaverit.length; i++){
+        console.log(kaverit[i]);
+        kaveriOl.innerHTML += `<li>${kaverit[i]}</li>`;
+    }
+}
